@@ -10,7 +10,7 @@ The pipeline ingests raw retail order data from a CSV file, loads it into a Post
 
 The goal of this project is to simulate how production data pipelines are designed in real-world analytics teams.
 
-🧠 What Problem This Solves
+🧠What Problem This Solves
 
 Raw data is often messy and not directly usable for reporting.
 
