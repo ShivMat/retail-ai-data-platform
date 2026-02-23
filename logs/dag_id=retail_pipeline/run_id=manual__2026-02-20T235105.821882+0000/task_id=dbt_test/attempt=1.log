@@ -1,0 +1,47 @@
+[2026-02-20T23:51:22.330+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-02-20T23:51:22.369+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: retail_pipeline.dbt_test manual__2026-02-20T23:51:05.821882+00:00 [queued]>
+[2026-02-20T23:51:22.389+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: retail_pipeline.dbt_test manual__2026-02-20T23:51:05.821882+00:00 [queued]>
+[2026-02-20T23:51:22.390+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 1
+[2026-02-20T23:51:22.420+0000] {taskinstance.py:2890} INFO - Executing <Task(BashOperator): dbt_test> on 2026-02-20 23:51:05.821882+00:00
+[2026-02-20T23:51:22.436+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'retail_pipeline', 'dbt_test', 'manual__2026-02-20T23:51:05.821882+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/retail_pipeline_dag.py', '--cfg-path', '/tmp/tmp8co2ht3y']
+[2026-02-20T23:51:22.447+0000] {standard_task_runner.py:105} INFO - Job 27: Subtask dbt_test
+[2026-02-20T23:51:22.453+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=222) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-02-20T23:51:22.455+0000] {standard_task_runner.py:72} INFO - Started process 223 to run task
+[2026-02-20T23:51:22.543+0000] {task_command.py:467} INFO - Running <TaskInstance: retail_pipeline.dbt_test manual__2026-02-20T23:51:05.821882+00:00 [running]> on host ***-scheduler
+[2026-02-20T23:51:22.691+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='retail_pipeline' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2026-02-20T23:51:05.821882+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-02-20T23:51:05.821882+00:00'
+[2026-02-20T23:51:22.693+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2026-02-20T23:51:22.714+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-02-20T23:51:22.720+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/retail_dbt && dbt test']
+[2026-02-20T23:51:22.742+0000] {subprocess.py:99} INFO - Output:
+[2026-02-20T23:51:26.117+0000] {subprocess.py:106} INFO - [0m23:51:26  Running with dbt=1.11.6
+[2026-02-20T23:51:26.555+0000] {subprocess.py:106} INFO - [0m23:51:26  Registered adapter: postgres=1.10.0
+[2026-02-20T23:51:27.392+0000] {subprocess.py:106} INFO - [0m23:51:27  Found 2 models, 7 data tests, 464 macros
+[2026-02-20T23:51:27.397+0000] {subprocess.py:106} INFO - [0m23:51:27
+[2026-02-20T23:51:27.398+0000] {subprocess.py:106} INFO - [0m23:51:27  Concurrency: 1 threads (target='dev')
+[2026-02-20T23:51:27.400+0000] {subprocess.py:106} INFO - [0m23:51:27
+[2026-02-20T23:51:27.544+0000] {subprocess.py:106} INFO - [0m23:51:27  1 of 7 START test not_null_fact_sales_order_date ............................... [RUN]
+[2026-02-20T23:51:27.646+0000] {subprocess.py:106} INFO - [0m23:51:27  1 of 7 PASS not_null_fact_sales_order_date ..................................... [[32mPASS[0m in 0.10s]
+[2026-02-20T23:51:27.650+0000] {subprocess.py:106} INFO - [0m23:51:27  2 of 7 START test not_null_fact_sales_product_id ............................... [RUN]
+[2026-02-20T23:51:27.710+0000] {subprocess.py:106} INFO - [0m23:51:27  2 of 7 PASS not_null_fact_sales_product_id ..................................... [[32mPASS[0m in 0.06s]
+[2026-02-20T23:51:27.718+0000] {subprocess.py:106} INFO - [0m23:51:27  3 of 7 START test not_null_stg_orders_order_date ............................... [RUN]
+[2026-02-20T23:51:27.785+0000] {subprocess.py:106} INFO - [0m23:51:27  3 of 7 PASS not_null_stg_orders_order_date ..................................... [[32mPASS[0m in 0.07s]
+[2026-02-20T23:51:27.789+0000] {subprocess.py:106} INFO - [0m23:51:27  4 of 7 START test not_null_stg_orders_order_id ................................. [RUN]
+[2026-02-20T23:51:27.849+0000] {subprocess.py:106} INFO - [0m23:51:27  4 of 7 PASS not_null_stg_orders_order_id ....................................... [[32mPASS[0m in 0.06s]
+[2026-02-20T23:51:27.854+0000] {subprocess.py:106} INFO - [0m23:51:27  5 of 7 START test not_null_stg_orders_product_id ............................... [RUN]
+[2026-02-20T23:51:27.913+0000] {subprocess.py:106} INFO - [0m23:51:27  5 of 7 PASS not_null_stg_orders_product_id ..................................... [[32mPASS[0m in 0.06s]
+[2026-02-20T23:51:27.917+0000] {subprocess.py:106} INFO - [0m23:51:27  6 of 7 START test not_null_stg_orders_quantity ................................. [RUN]
+[2026-02-20T23:51:27.983+0000] {subprocess.py:106} INFO - [0m23:51:27  6 of 7 PASS not_null_stg_orders_quantity ....................................... [[32mPASS[0m in 0.06s]
+[2026-02-20T23:51:27.988+0000] {subprocess.py:106} INFO - [0m23:51:27  7 of 7 START test unique_stg_orders_order_id ................................... [RUN]
+[2026-02-20T23:51:28.068+0000] {subprocess.py:106} INFO - [0m23:51:28  7 of 7 PASS unique_stg_orders_order_id ......................................... [[32mPASS[0m in 0.08s]
+[2026-02-20T23:51:28.097+0000] {subprocess.py:106} INFO - [0m23:51:28
+[2026-02-20T23:51:28.098+0000] {subprocess.py:106} INFO - [0m23:51:28  Finished running 7 data tests in 0 hours 0 minutes and 0.70 seconds (0.70s).
+[2026-02-20T23:51:28.199+0000] {subprocess.py:106} INFO - [0m23:51:28
+[2026-02-20T23:51:28.200+0000] {subprocess.py:106} INFO - [0m23:51:28  [32mCompleted successfully[0m
+[2026-02-20T23:51:28.201+0000] {subprocess.py:106} INFO - [0m23:51:28
+[2026-02-20T23:51:28.202+0000] {subprocess.py:106} INFO - [0m23:51:28  Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[2026-02-20T23:51:29.675+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-02-20T23:51:29.774+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2026-02-20T23:51:29.776+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=retail_pipeline, task_id=dbt_test, run_id=manual__2026-02-20T23:51:05.821882+00:00, execution_date=20260220T235105, start_date=20260220T235122, end_date=20260220T235129
+[2026-02-20T23:51:29.862+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-02-20T23:51:29.893+0000] {taskinstance.py:3901} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-02-20T23:51:29.899+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+﻿# Python
+.venv/
+.venv_old/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Airflow / logs
+logs/
+**/logs/
+
+# dbt artifacts
+retail_dbt/target/
+retail_dbt/dbt_packages/
+retail_dbt/logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
