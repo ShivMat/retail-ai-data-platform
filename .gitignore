@@ -20,3 +20,8 @@ retail_dbt/logs/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Airflow logs
+logs/
+opt/airflow/logs/
+**/logs/
