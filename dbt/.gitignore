@@ -5,3 +5,13 @@ __pycache__/
 logs/
 airflow_logs/
 .DS_Store
+
+# Airflow / runtime logs
+logs/
+**/logs/
+*.log
+
+# Python venv + env files
+.venv/
+venv/
+.env
