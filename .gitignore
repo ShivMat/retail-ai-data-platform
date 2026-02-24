@@ -25,3 +25,20 @@ Thumbs.db
 logs/
 opt/airflow/logs/
 **/logs/
+
+# Airflow logs
+logs/
+**/logs/
+
+# dbt build artifacts
+retail_dbt/target/
+retail_dbt/dbt_packages/
+retail_dbt/logs/
+
+# Python virtual env
+.venv/
+venv/
+
+# Env files
+.env
+**/.env
