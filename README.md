@@ -126,6 +126,54 @@ Revenue reporting
 
 Product performance analysis
 
+🤖 Revenue Forecasting (Scikit-Learn ML Model)
+
+In addition to building analytics-ready warehouse tables, this project includes a machine learning forecasting step.
+
+A Linear Regression model (Scikit-Learn) is trained on historical daily revenue data from analytics.fact_sales to predict future revenue.
+
+Forecasting Process
+
+Aggregate daily revenue from fact_sales
+
+Create time-based numerical features
+
+Train a Linear Regression model
+
+Split data into training and test sets
+
+Evaluate performance using:
+
+MAE (Mean Absolute Error)
+
+RMSE (Root Mean Squared Error)
+
+Store predictions and metrics back into Postgres
+
+Forecast Tables Created
+
+analytics.revenue_forecast
+
+Stores future predicted revenue values
+
+Includes forecast date and model name
+
+analytics.forecast_metrics
+
+Stores model evaluation metrics
+
+Includes MAE and RMSE values for each run
+
+-- View latest forecast metrics
+select * from analytics.forecast_metrics
+order by run_ts desc
+limit 5;
+
+-- View forecasted revenue
+select * from analytics.revenue_forecast
+order by run_ts desc, ds
+limit 10;
+
 Daily sales trends
 
 🧪 Data Quality Checks (dbt)
