@@ -196,3 +196,20 @@ Airflow DAG Success
 dbt Run and Tests Passing
 
 Final Postgres Output
+
+## Power BI Dashboard
+
+### Data Connection
+![Power BI Connection](screenshots/powerbi_data_connection.png)
+
+### Total Revenue KPI
+![Total Revenue KPI](screenshots/powerbi_kpi_total_revenue.png)
+
+### Revenue Trend
+![Revenue Trend](screenshots/powerbi_revenue_trend.png)
+
+### Top Products
+![Top Products](screenshots/powerbi_top_products.png)
+
+### Final Dashboard
+![Final Dashboard](screenshots/powerbi_dashboard_final.png)
