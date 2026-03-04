@@ -200,16 +200,16 @@ Final Postgres Output
 ## Power BI Dashboard
 
 ### Data Connection
-![Power BI Connection](screenshots/powerbi_data_connection.png)
+![Power BI Connection](screenshots/postgres_fact_sales_output.png)
 
 ### Total Revenue KPI
-![Total Revenue KPI](screenshots/powerbi_kpi_total_revenue.png)
+![Total Revenue KPI](screenshots/powerbi_kpi_total_revenue.png.png)
 
 ### Revenue Trend
-![Revenue Trend](screenshots/powerbi_revenue_trend.png)
+![Top Products](screenshots/powerbi_top_products.png.png)
 
 ### Top Products
 ![Top Products](screenshots/powerbi_top_products.png)
 
 ### Final Dashboard
-![Final Dashboard](screenshots/powerbi_dashboard_final.png)
+![Final Dashboard](screenshots/powerbi_dashboard_final.png.png)
